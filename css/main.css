@@ -1,0 +1,125 @@
+/* Product information section*/
+.productInfo {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 2.5em auto;
+
+}
+.productInfo__mainSlide {
+    display: flex;
+    align-items: stretch;
+    flex: 0 0 50%;
+}
+
+
+.productInfo__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  /* margin: 0; */
+  margin-right: 20px;
+}
+.productInfo__list li {
+  width: 75px;
+  height: 75px;
+}
+
+.productInfo__list li + li {
+  margin-top: 15px;
+}
+.productInfo__list li img {
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+}
+
+.productInfo__mainSlide img {
+  object-fit: contain;
+}
+
+.productInfo__info {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.productInfo__details{
+    margin-top: 0.5em;
+}
+
+.productInfo__details h2{
+    max-width: 12em;
+    font-weight: bold;
+}
+.productInfo--price{
+    font-size: 0.9em;
+    padding: 0.5em;
+    text-decoration: line-through;
+}
+.grayText{
+    color: lightgray;
+}
+.redText{
+    color: rgb(255, 59, 59);
+}
+
+.colors__list{
+    display: flex;
+    margin: 0.5em 0;
+}
+.colors__list span{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 0.5em;
+}
+.colors--brown{
+    background-color: brown;
+}
+.colors--black{
+    background-color: black;
+}
+.colors--blue{
+    background-color: blue;
+}
+
+.productInfo__size select{
+    margin-top: 0.5em;
+    padding: 1em;
+    width: 55%;
+}
+.productInfo__size select option {
+    background-color: white;
+}
+
+.productInfo__cart--add{
+    display: inline-block;
+    color: white;
+    width: 55%;
+    padding: 1em;
+    background-color: rgb(255, 59, 59);
+    text-align: center;
+    
+}
+
+.productInfo__features{
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+}
+.productInfo__features > div{
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.productInfo--icon {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    background-color: violet;
+    margin-right: 1em;
+}
