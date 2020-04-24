@@ -1,7 +1,11 @@
 /* Header Support  */
+header{
+  overflow: hidden;
+}
 a:hover{
   transition: all 0.3s linear;
 }
+
 .support {
     display: flex;
     justify-content: space-between;
@@ -11,8 +15,15 @@ a:hover{
     overflow: hidden;
     color: rgb(138, 138, 138);
 }
+.support__menueButton{
+  display: none;
+}
+[class*="menueButton"] img{
+  width: 25px;
+  height: 25px;
+}
 
-.support__links{
+.support__links ul{
     display: flex;
 }
 .support a{
@@ -56,13 +67,21 @@ margin-right: 1em;
     z-index: 3;
 }
 
+/* Exception needed öore specifity */
+.mainHeader div.mainHeader__menueButton{
+  display: none;
+}
+
 .mainHeader > div{
     flex: 1 0 50%;
     height: 100%;
     display: flex;
     align-items: center;
 }
-
+.mainHeader__searchAndUser{
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .mainHeader_links{
   display: flex;
 }
@@ -99,6 +118,8 @@ margin-right: 1em;
 .mainHeader__shoppingList a:hover{
   background-color:rgb(255, 59, 59);
 }
+
+
 .mainHeader__search--input{
   border: none;
   border-radius: 50px;
@@ -107,6 +128,7 @@ margin-right: 1em;
   background-image: url('../img/searchicon.png');
   background-position: 95% 6px; 
   background-repeat: no-repeat;
+  margin: 0.5em 0;
 }
 
 
@@ -116,7 +138,9 @@ margin-right: 1em;
   z-index: 2;
   position: relative;
 }
-
+.subHeader__menueButton{
+  display: none;
+}
 .subHeader__links{
   display: flex;
   align-items: stretch;
@@ -185,21 +209,88 @@ margin-right: 1em;
 
 /* Large screen */
 @media only screen and (max-width: 992px) {
-  header {
+ header .pageFullWidth{
+   padding-right: 0;
+   padding-left: 1em;
+ }
+ 
+ /* support header */
+ .support{
+   max-height: 2em;
+   height: 2em;
+ }
+ .support__menueButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.support__menueButton a{
+  padding: 1em;
+}
+.support__links{
     display: none;
-  }
+}
+
+/* main header  */
+.mainHeader{
+  justify-content: space-between;
+}
+.mainHeader > div {
+  flex: 0 1
+}
+
+.mainHeader div.mainHeader__menueButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainHeader div.mainHeader__menueButton a{
+  padding: 1em;
+}
+.mainHeader div.mainHeader__menueButton a:hover{
+  background-color: rgb(102, 102, 102);
+}
+.mainHeader div.mainHeader__searchAndUser{
+  display: none;
+}
+
+
 }
 
 /* Medium screen */
 @media only screen and (max-width: 768px) {
-  header {
-    display: none;
-  }
+  
 }
 
 /* Small screen */
 @media only screen and (max-width: 576px) {
-  header {
+  .subHeader__menueButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .subHeader__menueButton a{
+    padding: 1em;
+  }
+  .subHeader__menueButton a:hover{
+    background-color:  rgb(255, 59, 59);;
+  }
+  .subHeader__links a:not(.active){
     display: none;
+  }
+  .subHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .subHeader__links , .subHeader__links li, .subHeader__links li a{
+    height: 100%;
+  }
+  .discountBar{
+    font-size: 0.9em;
+  }
+}
+  .discountBar a{
+    margin-right: 1em;
   }
 }

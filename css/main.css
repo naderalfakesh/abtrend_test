@@ -389,7 +389,7 @@ position: relative;
         flex: 1 0 40%;
         margin-bottom: 1em;
         margin-right: 1em;
-        font-size: 1px;
+        /* font-size: 10px; */
     }
     .categories {
         min-height: 50%;
