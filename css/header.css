@@ -180,3 +180,26 @@ margin-right: 1em;
 .breadCrumbs__list li:last-child{
   font-weight: bold;
 } 
+
+/* Responsivity rules  */
+
+/* Large screen */
+@media only screen and (max-width: 992px) {
+  header {
+    display: none;
+  }
+}
+
+/* Medium screen */
+@media only screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
+}
+
+/* Small screen */
+@media only screen and (max-width: 576px) {
+  header {
+    display: none;
+  }
+}

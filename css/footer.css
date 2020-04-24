@@ -154,3 +154,30 @@
 .blackFooter_social a:hover{
     background-color: #ededed;
 }
+
+
+
+/* Responsivity rules  */
+
+/* Large screen */
+@media only screen and (max-width: 992px) {
+    footer {
+      display: none;
+    }
+  }
+  
+  /* Medium screen */
+  @media only screen and (max-width: 768px) {
+    footer {
+      display: none;
+    }
+  }
+  
+  /* Small screen */
+  @media only screen and (max-width: 576px) {
+    footer {
+      display: none;
+    }
+  }
+  
+ 
