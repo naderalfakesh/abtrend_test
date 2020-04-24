@@ -1,4 +1,7 @@
 /* Header Support  */
+a:hover{
+  transition: all 0.3s linear;
+}
 .support {
     display: flex;
     justify-content: space-between;
@@ -6,55 +9,51 @@
     max-height: 1.5em;
     background-color: rgb(248,248,248);
     overflow: hidden;
+    color: rgb(138, 138, 138);
 }
 
 .support__links{
     display: flex;
 }
-.support__links li{
-    /* flex: auto; */
-    /* text-align: center; */
-    padding: 1em
+.support a{
+    color: rgb(138, 138, 138);
+  display: inline-block;
+  padding: 1em
 }
-.support__links li a{
-  color: black;
-}
-.support__links li:hover{
-  color: rgb(228, 226, 226);
+.support a:hover{
+  color: rgb(45, 45, 45);
   background-color: darkgray;
 }
 
-/* .support ul li + li::before{
+.support ul li + li::before{
     content: "";
-    position: absolute;
-    width: 0;
-    border: 1px solid rgb(228, 226, 226);
-    top: 0;
-    bottom: 0;
-    margin-left: -20px;
-} */
+    border: 0.5px solid rgba(138, 138, 138,0.75);
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+.support ul li {
+  display: flex;
+  align-items: center;
+}
 
+.support .dots{
+margin-bottom: 0.5em;
+margin-right: 1em;
+}
 
-/* Icons */
-/* .heartIcon{
-    display: inline-block ;
-    background-image: url(../icons/heart.svg);
-    background-size: contain;
-    height: 25px;
-    width: 25px;
-} */
 
 /* main header */
  .mainHeader{
     display: flex;
     align-items: center;
     background-color: rgb(45,45,45);
-    color: white;
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    /* height: 4em;
-    max-height: 4em; */
+    color: rgb(222, 222, 222);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    position: relative;
+    z-index: 3;
 }
 
 .mainHeader > div{
@@ -65,35 +64,22 @@
 }
 
 .mainHeader_links{
-  height: 100%;
   display: flex;
-  align-items: stretch;
 }
 
-.mainHeader_links nav{
-  height: 100%;
+.mainHeader_links a{
+  color: rgb(222, 222, 222);
+  display: inline-block;
+  padding: 1.5em;
+  font-weight: bolder;
 }
 
-.mainHeader_links li{
-  height: 100%;
-  padding: 1em;
-  flex: auto;
-  text-align: center;
-}
-.mainHeader_links li:hover{
+.mainHeader_links a:hover , .mainHeader_links a.active{
     background-color: rgb(102, 102, 102);
+    color: white;
     cursor: pointer;
 }
 
-.mainHeader_links li a{
-  color: #dbdbdb;
-}
-.mainHeader_links li a:hover{
-  color: rgb(255,255,255);
-}
-
-
-/*
 .logo{
     display: flex;
     justify-content: center;
@@ -102,45 +88,42 @@
     padding-right: 1em;
 }
 
-
-.linkList{
-    display: flex;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+.mainHeader__shoppingList{
+  display: flex;
+  margin-left: 1em;
 }
-/* .linkList li{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-} */
-
-/* .linkList a{
-    display: block;
-    color: #dbdbdb;
-    height: 100%;
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 0.5em ;
+.mainHeader__shoppingList a{
+  display:inline-block;
+  padding: 1em; 
 }
-
-.linkList a:hover{
-    color: rgb(255,255,255);
-    background-color: rgb(102, 102, 102);,
-}  */
+.mainHeader__shoppingList a:hover{
+  background-color:rgb(255, 59, 59);
+}
+.mainHeader__search--input{
+  border: none;
+  border-radius: 50px;
+  padding: 0.8em;
+  width: 25em;
+  background-image: url('../img/searchicon.png');
+  background-position: 95% 6px; 
+  background-repeat: no-repeat;
+}
 
 
 /** Subheader **/
 .subHeader{
   background-color: rgb(102, 102, 102);
+  z-index: 2;
+  position: relative;
 }
 
 .subHeader__links{
   display: flex;
   align-items: stretch;
   padding: 0;
-}
-.subHeader__links li{
+  z-index: 1;
+  position: relative;
+
 }
 .subHeader__links a{
   display: inline-block;
@@ -150,7 +133,7 @@
   font-weight: 400;
 }
 
-.subHeader__links a:hover{
+.subHeader__links a:hover, .subHeader__links a.active{
   background-color: rgb(255, 59, 59);
 }
 .subHeader--number{
@@ -177,8 +160,6 @@
 .discountBar a:hover{
   background-color: white;
   color: rgb(255, 59, 59);
-  transition: all 0.3s linear;
-
 }
 
 

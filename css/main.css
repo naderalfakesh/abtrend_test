@@ -36,8 +36,10 @@
   cursor: pointer;
 }
 
-.productInfo__mainSlide img {
-  object-fit: contain;
+.targetSlide {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .productInfo__info {
@@ -77,38 +79,75 @@
     margin-right: 0.5em;
 }
 .colors--brown{
-    background-color: brown;
+    background-color: rgb(72, 63, 39);
 }
 .colors--black{
     background-color: black;
 }
 .colors--blue{
-    background-color: blue;
+    background-color: rgb(35, 101, 208);
 }
 
+
+  /* custom select */
 .productInfo__size select{
+    font-size: 1em;
+    height: 3em;
     margin-top: 0.5em;
-    padding: 1em;
-    width: 55%;
+    /* padding: 1em; */
+    width: 65%;
+    border: none;
+    background-color: rgb(226, 226, 226);
+
 }
 .productInfo__size select option {
-    background-color: white;
+    background-color: rgb(226, 226, 226);
+    font-size: 1em;
 }
 
+/*******************/
+
+.productInfo__cart{
+    display: flex;
+}
 .productInfo__cart--add{
+    font-size: 1em;
+    font-weight: bold;
     display: inline-block;
     color: white;
-    width: 55%;
+    height: 3em;
+    width: 65%;
     padding: 1em;
     background-color: rgb(255, 59, 59);
+    border: 1px solid rgb(255, 59, 59);
     text-align: center;
-    
+}
+.productInfo__cart--add:hover{
+    background-color: white;
+    color: rgb(255, 59, 59);
 }
 
+.productInfo__cart--heart{
+    display: inline-block;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid rgb(226, 226, 226);
+    text-align: center;
+    padding: 0.8em 1em;
+    margin-left: 1em;
+    height: 3em;
+}
+.productInfo__cart--heart:hover{
+    background-color: white;
+    color: rgb(226, 226, 226);
+}
+.productInfo__cart--heart img{
+    height: 1.3em;
+    width: 1.3em;
+}
 .productInfo__features{
     display: flex;
     align-items: center;
-    font-size: 8px;
+    font-size: 10px;
 }
 .productInfo__features > div{
     display: flex;
@@ -116,11 +155,10 @@
     margin-right: 1em;
 }
 
-.productInfo--icon {
-    width: 1.5em;
-    height: 1.5em;
+.productInfo__features img {
+    width: 2em;
+    height: 2em;
     display: inline-block;
-    background-color: violet;
     margin-right: 1em;
 }
 
@@ -158,7 +196,7 @@
 .productDetails__tabs a{
     font-weight: bolder;
 }
-.productDetails__tabs--active{
+.productDetails__tabs a:hover , .productDetails__tabs--active{
     color: rgb(255, 59, 59);
 }
 
@@ -195,7 +233,7 @@ position: relative;
   .similarProducts__card {
     flex: 0 0 25%;
 }
-  .similarProducts__card img{
+  .similarProducts__card > img{
       margin: 0 auto;
       display: block;
       width: 90%;
@@ -211,6 +249,7 @@ position: relative;
     display: flex;
     justify-content: space-between;
   }
+  
 
 
   /* Categories section */
@@ -232,11 +271,16 @@ position: relative;
       width: 95%;
       object-fit: cover;
   }
+  .categories__category h3{
+      margin-top: 1em;
+      /* margin-bottom: 0.5em; */
+  }
   .categories__category button{
       padding: 1em;
       background-color: black;
       color: white;
       border: 1px solid black;
+      margin-top: 1em;
 }
   .categories__category button:hover{
       background-color: white;
@@ -254,10 +298,15 @@ position: relative;
 }
 .features__card{
     flex: 0 0 30%;
-    border: 2px solid black;
+    border: 4px solid black;
     padding: 2em;
     display: flex;
     flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.features__card h3{
+    margin-top: 1em;
+    margin-bottom: 1em;
+
 }

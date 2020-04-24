@@ -1,6 +1,6 @@
 /* Main footer */
 .mainFooter{
-    background-color: lightgray;
+    background-color: #ededed;
     min-height: 50vh;
     padding-top: 3em;
     padding-bottom: 3em;
@@ -32,6 +32,21 @@
     justify-content: space-between;
     margin-right: 5em;
 }
+
+.mainFooter__contacts > div:first-of-type{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.mainFooter__contacts > div:first-of-type b{
+    display: block;
+    font-weight: bolder;
+    padding: 0.8em 0;
+}
+.mainFooter__contacts > div:first-of-type a{
+   color: black;
+   font-size: 1em;
+}
+
 .mainFooter__siteMap__column1{
     flex: 1 0;
 }
@@ -43,13 +58,15 @@
 }
 .mainFooter__downloadMethods ul{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 .mainFooter__downloadMethods a{
     display: block;
-    margin-left: 1em;
 }
 .mainFooter__downloadMethods img{
-    width: 100px;
+    width: 120px;
     object-fit: cover;
 }
 
@@ -65,10 +82,13 @@
     justify-content: space-between;
     align-items: center;
 }
-.mainFooter__features img{
-   margin-right: 1em;
+.mainFooter__features span{
+    display: inline-block;
+    background-color: black;
+    padding: 0.2em 0.4em;
+    margin-right: 1em;
+    margin-left: 0.5em;
 }
-
 .mainFooter__column2_subcolumn{
     display: flex;
     justify-content: space-between;
@@ -87,24 +107,11 @@
     justify-content: space-between;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Black footer section  */
 
 .blackFooter{
     background-color: black;
-    color: white;
+    color: rgb(176, 176, 176);
     min-height: 25vh;
     display: flex;
     justify-content: space-between;
@@ -113,7 +120,12 @@
     font-size: 0.8em;
 }
 .blackFooter a{
-    color: white;
+    color: rgb(176, 176, 176);
+    padding: 1em 0.5em;
+}
+.blackFooter a:hover{
+    color: black;
+    background-color: rgb(176, 176, 176);
 }
 .blackFooter ul , .blackFooter_social{
     display: flex;
@@ -126,5 +138,19 @@
 .blackFooter li ,.blackFooter h5 {
     padding-right: 1em;
     padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
+.blackFooter_social img{
+ width: 25px;
+ height: 25px;
+}
+.blackFooter_social a{
+    display: block;
+    padding: 2.5px;
+    background-color: white;
+}
+
+.blackFooter_social a:hover{
+    background-color: #ededed;
+}
